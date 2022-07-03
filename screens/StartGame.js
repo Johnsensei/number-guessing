@@ -1,12 +1,27 @@
-import { View, TextInput, Button, Pressable } from "react-native";
+import { View, TextInput, StyleSheet, Button, Pressable } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
 export default function StartGame() {
     return(
-        <View>
+        <View style={styles.inputContainer}>
             <TextInput />
             <PrimaryButton>Reset</PrimaryButton>
             <PrimaryButton>Confirm</PrimaryButton>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    inputContainer: {
+        padding: 20,
+        marginTop: 100,
+        marginHorizontal: 24,
+        borderRadius: 8,
+        backgroundColor: '#F3AC5A',
+        elevation: 4,
+        shadowColor: '#000000',
+        shadowOffset: {width: 1, height: 2},
+        shadowRadius: 6,
+        shadowOpacity: 0.25,
+    }
+});
