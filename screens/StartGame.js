@@ -13,8 +13,14 @@ export default function StartGame() {
                 autoCapitalize='none'
                 autoCorrect={false}
             />
-            <PrimaryButton>Reset</PrimaryButton>
-            <PrimaryButton>Confirm</PrimaryButton>
+            <View style={styles.buttonsContainer}>
+                <View style={styles.buttonSingleContainer}>
+                    <PrimaryButton>Reset</PrimaryButton>   
+                </View>
+                <View style={styles.buttonSingleContainer}>
+                    <PrimaryButton>Confirm</PrimaryButton>
+                </View>
+            </View>
         </View>
     );
         
@@ -32,10 +38,12 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 1, height: 2},
         shadowRadius: 6,
         shadowOpacity: 0.25,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     numberInput: {
         height: 50,
-        width: 50,
+        width: 60,
         fontSize: 32,
         borderBottomColor: "#DDDDDD",
         borderBottomWidth: 2,
@@ -44,5 +52,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#000000',
         fontFamily: 'ArchivoBlack_400Regular',
+    },
+    buttonsContainer: {
+        flexDirection: 'row',
+    },
+    buttonSingleContainer: {
+        flex: 1,
     }
 });
