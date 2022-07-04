@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import StartGame from './screens/StartGame';
 import { 
   ArchivoBlack_400Regular 
@@ -17,12 +18,18 @@ export default function App() {
   } else {
     console.log(fontsLoaded);
     return (
-      <StartGame />
+      <View style={styles.rootScreen}>
+        <StartGame />
+        <StatusBar />
+      </View>
     );
   }
   
 }
 
 const styles = StyleSheet.create({
-
+    rootScreen: {
+      backgroundColor: '#EFCFB6',
+      flex: 1,
+    }
 });
