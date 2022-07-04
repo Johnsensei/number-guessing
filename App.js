@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import { LinearGradient } from 'expo-linear-gradient';
 import StartGame from './screens/StartGame';
 import { 
   ArchivoBlack_400Regular 
@@ -16,12 +17,14 @@ export default function App() {
   if(!fontsLoaded){
     return <AppLoading />
   } else {
-    console.log(fontsLoaded);
     return (
-      <View style={styles.rootScreen}>
+      <LinearGradient
+        style={styles.rootScreen}
+        colors={['#EFCFB6', '#FBF6E7']}
+      >
         <StartGame />
         <StatusBar />
-      </View>
+      </LinearGradient>
     );
   }
   
@@ -29,7 +32,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
     rootScreen: {
-      backgroundColor: '#EFCFB6',
+      // backgroundColor: '#EFCFB6',
       flex: 1,
+
     }
 });
