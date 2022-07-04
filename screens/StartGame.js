@@ -1,19 +1,25 @@
 import { View, TextInput, StyleSheet, Button, Pressable } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
+
 export default function StartGame() {
+
     return(
         <View style={styles.inputContainer}>
             <TextInput
                 style={styles.numberInput}
                 maxLength={2}
+                keyboardType='number-pad'
+                autoCapitalize='none'
+                autoCorrect={false}
             />
             <PrimaryButton>Reset</PrimaryButton>
             <PrimaryButton>Confirm</PrimaryButton>
         </View>
     );
-}
-
+        
+    }
+    
 const styles = StyleSheet.create({
     inputContainer: {
         padding: 20,
@@ -33,10 +39,10 @@ const styles = StyleSheet.create({
         fontSize: 32,
         borderBottomColor: "#DDDDDD",
         borderBottomWidth: 2,
-        color: '#000000',
         marginVertical: 8,
         fontWeight: 'bold',
         textAlign: 'center',
-
+        color: '#000000',
+        fontFamily: 'ArchivoBlack_400Regular',
     }
 });
