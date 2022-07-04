@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
 import StartGame from './screens/StartGame';
@@ -22,7 +22,14 @@ export default function App() {
         style={styles.rootScreen}
         colors={['#EFCFB6', '#FBF6E7']}
       >
-        <StartGame />
+        <ImageBackground
+          source={require('./img/candyman.jpeg')}
+          resizeMode='cover'
+          style={styles.rootScreen}
+          imageStyle={styles.backgroundImage}
+        >
+          <StartGame />
+        </ImageBackground>
         <StatusBar />
       </LinearGradient>
     );
@@ -35,5 +42,8 @@ const styles = StyleSheet.create({
       // backgroundColor: '#EFCFB6',
       flex: 1,
 
+    },
+    backgroundImage: {
+      opacity: 0.15
     }
 });
