@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Dimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
 import StartGame from './screens/StartGame';
@@ -44,6 +44,11 @@ const styles = StyleSheet.create({
 
     },
     backgroundImage: {
-      opacity: 0.15
+      opacity: 0.15,
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: 500,
+      height: 800,
     }
 });
